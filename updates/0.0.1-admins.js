@@ -9,7 +9,7 @@
 
 exports.create = {
 	User: [
-		{ 'name.first': 'Admin', 'name.last': 'User', email: 'parker@piandigo.com', password: 'parkerpiandigo', isAdmin: true }
+		{ 'name.first': 'Admin', 'name.last': 'User', email: 'default@piandigo.com', password: 'defaultuser', isAdmin: true }
 	]
 };
 

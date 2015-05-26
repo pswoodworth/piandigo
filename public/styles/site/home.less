@@ -35,23 +35,29 @@ body{
 			font-size: 1.6em;
 			margin: 0px;
 		}
-		#buttons{
+		#conversion{
 			margin: 1.6em 0em;
-			button{
-				border: 1px solid @chill;
-				background-color: rgba(0,0,0,0);
-				font-weight: 300;
-				padding: .8em 1.8em;
-				border-radius: 15px;
-				font-size: 1.1em;
-				
+			#buttons{
+				position: absolute;
+				button{
+					border: 1px solid @chill;
+					background-color: rgba(0,0,0,0);
+					font-weight: 300;
+					padding: .8em 1.8em;
+					border-radius: 15px;
+					font-size: 1.1em;
+					
+				}
+				#share{
+					margin-right: 1.2em;
+				}
+				button:hover{
+					background-color: @chill;
+					color: @brand-color;
+				}
 			}
-			#share{
-				margin-right: 1.2em;
-			}
-			button:hover{
-				background-color: @chill;
-				color: @brand-color;
+			#form{
+
 			}
 		}
 	}
