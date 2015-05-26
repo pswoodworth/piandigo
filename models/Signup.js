@@ -12,6 +12,7 @@ var Signup = new keystone.List('Signup', {
 });
 
 Signup.add({
+	type: { type: String, required: true},
 	email: { type: String, required: true },
 	city: { type: String, required: true },
 	time: { type: Date, default: Date.now }
