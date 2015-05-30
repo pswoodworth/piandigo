@@ -28,6 +28,7 @@ body{
 		color: @chill;
 		text-align: center;
 		width: 100%;
+		overflow-x: hidden;
 		margin-top: 4.5em;
 		padding: 2em 0em 2.2em 0em;
 		h2{
@@ -35,29 +36,129 @@ body{
 			font-size: 1.6em;
 			margin: 0px;
 		}
+
 		#conversion{
 			margin: 1.6em 0em;
-			#buttons{
-				button{
-					border: 1px solid @chill;
-					background-color: rgba(0,0,0,0);
-					font-weight: 300;
-					padding: .8em 1.8em;
-					border-radius: 15px;
-					font-size: 1.1em;
-					
-				}
-				#share{
-					margin-right: 1.2em;
-				}
-				button:hover{
-					background-color: @chill;
-					color: @brand-color;
+			text-align: center;
+			#buttons-wrapper{
+				width: 300%;
+				text-align: left;
+				margin-left: 0%;
+				-webkit-transition: margin-left .41s linear;
+				-moz-transition: margin-left .41s linear;
+				-ms-transition: margin-left .41s linear;
+				-o-transition: margin-left .41s linear;
+				transition: margin-left .41s linear;
+				.conversion-element{
+					text-align: center;
+					float: left;
+					margin-bottom: 1em;
+					width: 33.33333333333333%;
+					vertical-align: middle;
+					button, input{
+						border: 1px solid @chill;
+						background-color: rgba(0,0,0,0);
+						font-weight: 300;
+						padding: .8em 1.8em;
+						border-radius: 15px;
+						font-size: 1.1em;
+						outline: none;	
+					}
+					#share{
+						margin-right: 1.2em;
+					}
+					button:hover, input[type=submit]:hover{
+						background-color: @chill;
+						color: @brand-color;
+					}
+
+					input::-webkit-input-placeholder {
+						color: @chill;
+					}
+					input::-moz-placeholder {
+						color: @chill;
+					}
+					input:-moz-placeholder {   /* Older versions of Firefox */
+						color: @chill;
+					}
+					input:-ms-input-placeholder { 
+						color: @chill;
+					}
+					#success{
+						font-weight: 400;
+						margin-top: .6em;
+					}
 				}
 			}
-			#form{
-
+			#buttons-wrapper.transitioned{
+				margin-left: -100%;				
+			}
+			#buttons-wrapper.transitioned.submitted{
+				margin-left: -200%;				
 			}
 		}
+	}
+
+	.ui-helper-hidden-accessible{
+		display: none;
+	}
+}
+
+@media only screen and (max-device-width: 500px){
+	#container{
+		#logo{
+			width: 120px;
+			left: 50%;
+			margin-left: -60px;
+			position: relative;
+		}
+		#top-section{
+			margin-top: 2em;
+			#piano{
+				width: 160px;
+				margin: .7em 0em;
+			}
+			h1{
+				font-weight: 300;
+				font-size: 1.2em;
+				color: @brand-color;
+			}
+		}
+		#signup-section{
+			background-color: @brand-color;
+			color: @chill;
+			text-align: center;
+			width: 100%;
+			overflow-x: hidden;
+			margin-top: 2em;
+			padding: 2em 0em 2.2em 0em;
+			h2{
+				font-weight: 300;
+				font-size: 1.6em;
+				margin: 0px;
+			}
+			#this-year{
+				padding-top: 3.2em;
+			}
+			#conversion{
+				margin: 1.6em 0em;
+				text-align: center;
+				#buttons-wrapper{
+					.conversion-element{
+						button, input{
+							margin-top: 8px;
+						}
+						#share{
+							margin-right: 0em;
+						}
+						#success{
+							padding: 0px 20px;
+						}
+					}
+				}
+			}
+		}
+
+
 	}
 }

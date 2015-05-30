@@ -7,15 +7,23 @@
 		<h1>SHARE A PIANO</h1>
 	</div>
 	<div id="signup-section">
-		<h2>Interested?</h2>
+		<h2 id="interested">Interested?</h2>
 		<div id="conversion">
-			<div id="buttons">
-				<button id="share">I have a piano to share.</button>
-				<button id="play">I want a piano to play.</button>
-			</div>
-			<div id="form">
+			<div id="buttons-wrapper">
+				<div class="conversion-element">
+					<button id="share">I have a piano to share.</button>
+					<button id="play">I want a piano to play.</button>
+				</div>
+				<form class="conversion-element">
+					<input id="email" type="text" placeholder="email">
+					<input id="city" type="text" placeholder="city">
+					<input id="submit" type="submit">
+				</form>
+				<div class="conversion-element">
+					<h2 id="success">Thanks! We'll be in touch with more information.</h2>
+				</div>
 			</div>
 		</div>
-		<h2>Coming this year.</h2>
+		<h2 id="this-year">Coming this year.</h2>
 	</div>
 </div>

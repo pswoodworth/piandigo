@@ -5,15 +5,14 @@ exports = module.exports = function(req, res) {
 	
 	var view = new keystone.View(req, res),
 		locals = res.locals;
-	
-	
-	// On POST requests, add the Enquiry item to the database
-	view.on('post', { action: 'contact' }, function(next) {
 		
-		var newSignup = new Signup.model();
-		
+	var newSignup = new Signup.model(req.body);
+	newSignup.save(function(err){
+		if (!err){
+			res.sendStatus(200);
+		}else{
+			console.log(err);
+		}
 	});
-	
-	res.sendStatus(200);
-	
+		
 };
